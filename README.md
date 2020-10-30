@@ -53,7 +53,7 @@ In the command prompt, you will see the name (EnvModelling) appear from (base). 
 
 Can you see the project folders and files? You are good to go! Everytime you now want to open the notebooks for this project, open either the Anaconda prompt or Terminal, activate the environment and then run the last command from within the project folder.
 
-### 1(b). Binder e<a name="Binder"></a>
+### 1(b). Binder <a name="Binder"></a>
 
 If you do not, or cannot, run Python from your own machine we have provided the ability for you to interact with these files using Binder. The Binder project offers an easy place to share computing environments to everyone. It allows users to specify custom environments and share them with a [single link](https://jupyter.org/binder). Indeed, if you click the link below this will spin-up an individual session for you. Please bare in mind it can take a while to start, and if idle for a short period these sessions will stop. However you can download your notebook file during the session. Everytime you start a Binder link, it will start from scratch.
 
