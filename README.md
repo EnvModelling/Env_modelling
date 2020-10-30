@@ -63,9 +63,12 @@ If you do not, or cannot, run Python from your own machine we have provided the 
 
 Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can get or have an existing Google account, using Google Colab is a really nice experience. It will allow you to say individual files and projects to your Google Drive. We dont cover that here. By clicking on the above link it will take you to a page that presents you with options to load existing files from either your Google Drive or from public repositories. However we can also provide you with a clickable link for running individual notebook files, much like Binder. These are given below and are linked to each notebook file. You will likely find these load much quicker than using Binder. However, you may find any images used in the notebook file that are in the Github repo do not load..but not a huge problem. The links to current notebook files are given below:
 
-[![Open Reaction-Diffusion notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb)
-
-[![Open Agent-Based notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Agent_based_2D.ipynb)
+#### Reaction-Diffusion notebook
+[![Open Reaction-Diffusion notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb
+)
+#### Agent-Based notebook
+[![Open Agent-Based notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Agent_based_2D.ipynb
+)
 
 
 
