@@ -13,7 +13,7 @@ In this repository you will find a collection of Jupyter notebooks containing ex
 
 If you have not used a Jupyter notebook before, I would reccomend checking out the official [webpage](https://jupyter.org/). There is also information provided in the PDF associated with each notebook. There are multiple ways you can interact with a Jupyter notebook. The most flexible way is to open and interact with them on your own computer. However you can start an instance of every notebook running in the cloud. We provide details below
 
-### 1a. Using your own machine<a name="own"></a>
+### 1(a). Using your own machine<a name="own"></a>
 
 Having a Python distribution on your own machine is attractive for a number of reasons, not least gaining familiarity with building projects in your own time. If you havent already, I would reccomend installing the Anaconda distribution. You can download a copy using [this link](https://www.anaconda.com/products/individual). That page will give you the option to download a version for Windows, Mac or Linux. Download the graphical installer and, typically, accept all options. Once you have installed this, now open a terminal. On Windows, go to the menu of options and find 'Anaconda Prompt' under the Anaconda folder. On a Mac, go to Finder -> Utilities -> Terminal. If on a Mac, when in this terminal when you type:
 
@@ -70,6 +70,7 @@ Google's Colab [Co-laboratory](https://colab.research.google.com) is a great pla
 [![Open Agent-Based notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Agent_based_2D.ipynb
 )
 
+## Notes <a name="Notes"></a>
 
 
 
