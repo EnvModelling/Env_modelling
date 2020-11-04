@@ -1,6 +1,6 @@
 # Environmental modelling
 
-In this repository you will find a collection of Jupyter notebooks containing exercises the broad area of Environmental Modelling. This is currently run as part of the Department of Earth and Environmental Sciences course on Environmental Modelling, but can be widely used. In all notebooks we present demonstrations of complete code, where exercises are based on either modifying that code or ask you to change parameters and quantify the impact on a simulation.
+In this repository you will find a collection of Jupyter notebooks containing exercises within the broad area of Environmental Modelling. This is currently run as part of the Department of Earth and Environmental Sciences course on Environmental Modelling, but can be widely used. In all notebooks we present demonstrations of complete code, where exercises are based on either modifying that code or we ask you to change parameters and quantify the impact on a simulation.
 
 # Table of contents
 1. [Running the models](#Running)
@@ -29,11 +29,11 @@ If you are on Windows, go back to the Anaconda prompt. If you are on a Mac or Li
 
 > git clone https://github.com/loftytopping/Env_modelling.git
 
-This will download the project to the location you are in already. You can change this location before running the above command, or move the folder later. Github also gives you the option to download a ZIP file of the entire project if you cannot or do not want to use Git. Once you have the project downloaded, open a command propmt/terminal and navigate to the project folder. We are now going to use the file 'environment.yml' to create a new virtual environment. Run the following command:
+This will download the project to the location you are in already. You can change this location before running the above command, or move the folder later. Github also gives you the option to download a ZIP file of the entire project if you cannot, or do not want, to use Git. Once you have the project downloaded, open a command prompt/terminal and navigate to the project folder. We are now going to use the file 'environment.yml' to create a new virtual environment. Run the following command:
 
 > conda env create -f environment.yml
 
-You will see a number of packages being downloaded, eventually, by the conda package manager which is part of the Anaconda distribution. Accept any requests and, when finished, you will see a message that resembles the following:
+You will see a number of packages being downloaded by the conda package manager which is part of the Anaconda distribution. Accept any requests and, when finished, you will see a message that resembles the following:
 
     To activate this environment, use
     
@@ -43,15 +43,15 @@ You will see a number of packages being downloaded, eventually, by the conda pac
     
         $ conda deactivate
         
-These are the commands for swithing on/off this new virtual environment. Let's switch it on. Type the following in the command prompt/terminal:
+These are the commands for switching on/off this new virtual environment. Let's switch it on. Type the following in the command prompt/terminal:
 
 > conda activate EnvModelling
 
-In the command prompt, you will see the name (EnvModelling) appear from (base). Now we can start an interactive Jupyer notebook session. Still within the project folder, type the following:
+In the command prompt, you will see the name (EnvModelling) replace (base). Now we can start an interactive Jupyer notebook session. Still within the project folder, type the following:
 
 > jupyter notebook
 
-Can you see the project folders and files? You are good to go! Everytime you now want to open the notebooks for this project, open either the Anaconda prompt or Terminal, activate the environment and then run the last command from within the project folder.
+Can you see the project folders and files? You are good to go! Every time you now want to open the notebooks for this project, open either the Anaconda prompt or Terminal, activate the environment and then run the last command from within the project folder.
 
 ### 1(b). Binder <a name="Binder"></a>
 
@@ -61,7 +61,7 @@ If you do not, or cannot, run Python from your own machine we have provided the 
 
 ### 1(c). Using Google Colab<a name="Colab"></a>
 
-Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can get or have an existing Google account, using Google Colab is a really nice experience. It will allow you to say individual files and projects to your Google Drive. We dont cover that here. By clicking on the above link it will take you to a page that presents you with options to load existing files from either your Google Drive or from public repositories. However we can also provide you with a clickable link for running individual notebook files, much like Binder. These are given below and are linked to each notebook file. You will likely find these load much quicker than using Binder. However, you may find any images used in the notebook file that are in the Github repo do not load..but not a huge problem. The links to current notebook files are given below:
+Google's Colab [Co-laboratory](https://colab.research.google.com) is a great platform for developing machine learning and data-science driven applications on the web. It provides access to free GPU resource (Graphics Processing Units). However it also allows us to run Jupyter notebooks from a Github repository *if you have a Google account*. If you can register or have an existing Google account, using Google Colab is a really nice experience. It will allow you to save individual files and projects to your Google Drive. We dont cover that here. By clicking on the above link it will take you to a page that presents you with options to load existing files from either your Google Drive or from public repositories. However we can also provide you with a clickable link for running individual notebook files, much like Binder. These are given below and are linked to each notebook file. You will likely find these load much quicker than using Binder. However, you may find any images used in the notebook file that are in the Github repo do not load..but not a huge problem. The links to current notebook files are given below:
 
 #### Reaction-Diffusion notebook
  - [![Open Reaction-Diffusion notebook In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loftytopping/Env_modelling/blob/master/Spatio-temporal-modelling/Reaction_diffusion_2D.ipynb)
