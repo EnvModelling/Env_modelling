@@ -3,6 +3,7 @@ from IPython.display import clear_output, display
 import matplotlib.pyplot as plt #as per the above, much easier to write over and over again 
 import time
 
+
 def discrete_laplacian(M):
     """Get the discrete Laplacian of matrix M"""
     L = -4*M
