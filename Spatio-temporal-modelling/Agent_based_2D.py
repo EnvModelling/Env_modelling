@@ -6,6 +6,23 @@ from IPython.display import clear_output, display
 import pdb
 import random
 import numpy as np
+import os
+import getpass
+
+NUMA=1000
+NUMB=1000
+RAN_A=False
+ATTR=10
+
+username=getpass.getuser()
+    
+EXPERIMENT = 1   
+    
+
+if not os.path.exists('/tmp/' + username):
+    os.mkdir('/tmp/' + username)
+os.system('rm /tmp/' + username + '/*')
+
 
 # class, defining agents with their position and group membership
 class agent:
@@ -58,7 +75,7 @@ def initfield(populationSizeA,populationSizeB):
     return field_grid, agents_A, agents_B
 
 # executing above function for a population size of 1000 for both groups
-field, agents_A, agents_B = initfield(populationSizeA=1000,populationSizeB=700)
+field, agents_A, agents_B = initfield(populationSizeA=NUMA,populationSizeB=NUMB)
 # print (np.count_nonzero(np.array(mapfield(field))==2.))
 
 # Now lets plot the 2D space and see what our initial condition looks like
@@ -86,6 +103,9 @@ ax.imshow(population_grid, cmap=colormap)
 plt.title('Agent distribution: Group A green, B blue')
 plt.ion()
 plt.show()
+plt.savefig('/tmp/' + username + '/initial.png')
+plt.close()
+
 
 
 
@@ -107,8 +127,9 @@ def oneRoundAgentA(i,j,attackRange):
     # look in neigbouring cells in same order for each iteration
     list1 = [k for k in range(i-attackRange,i+attackRange+1)]
     list2 = [l for l in range(j-attackRange,j+attackRange+1)]
-#     random.shuffle(list1)
-#     random.shuffle(list2)
+    if RAN_A:
+        random.shuffle(list1)
+        random.shuffle(list2)
     for k in list1:
         for l in list2:
             # check for negative index values; if so - break!
@@ -174,10 +195,10 @@ for counter in range(1,51): # in this case I am conducting 50 iterations
                 # depending on the type: execute respective attack strategy
                 if field[x][y].group == "A":
                     # one round of battle for this agent of type A
-                    oneRoundAgentA(i = x, j = y,attackRange=10)
+                    oneRoundAgentA(i = x, j = y,attackRange=ATTR)
                 else: 
                     # one round of battle for this agent of type B
-                    oneRoundAgentB(i = x, j = y,attackRange=10)
+                    oneRoundAgentB(i = x, j = y,attackRange=ATTR)
     # identifying agents with life score of score or below - and removing them from the grid
     removeAgents(field)
     population_grid = mapfield(field)
@@ -185,19 +206,15 @@ for counter in range(1,51): # in this case I am conducting 50 iterations
 
     
 fig, ax = plt.subplots(figsize=(10,10))
-plt.imshow(record_field[:,:,0], cmap=colormap)
+plt.imshow(record_field[:,:,-1], cmap=colormap)
 plt.title('Agent distribution: Group A green, B blue')
 plt.show()
+plt.savefig('/tmp/' + username + '/final.png')
+plt.close()
 
-# for counter in range(0,50):
-#     plt.rcParams["figure.figsize"] = (10, 10)
-#     #display(plt.gcf())
-#     clear_output(wait=True)
-#     plt.imshow(record_field[:,:,counter], cmap=colormap)
-#     plt.show();
-#     time.sleep(0.05);
-        
-        
+
+
+
 A_list = np.zeros((51), dtype=int)
 B_list = np.zeros((51), dtype=int)
 time_array = np.linspace(0.0, 51.0, num=51)
@@ -207,9 +224,34 @@ for counter in range(0,51):
     B_list[counter]=np.count_nonzero(record_field[:,:,counter] == 2)
     
 fig, ax = plt.subplots(figsize=(7,7))
-plt.plot(time_array, A_list, 'g', label='specie A',linewidth=2)
-plt.plot(time_array, B_list, 'b', label='specie B',linewidth=2)
+plt.plot(time_array, A_list/NUMA, 'g', label='species A',linewidth=2)
+plt.plot(time_array, B_list/NUMB, 'b', label='species B',linewidth=2)
 plt.xlabel('time', fontsize=12)
 plt.ylabel('species concentration', fontsize=16)
 plt.legend()
 plt.show()
+plt.savefig('/tmp/' + username + '/time_series.png')
+plt.close()
+
+
+
+
+plt.rcParams["figure.figsize"] = (10, 10)
+for counter in range(0,51):
+    #display(plt.gcf())
+    clear_output(wait=True)
+    if counter == 0:
+        myobj=plt.imshow(record_field[:,:,counter], cmap=colormap)
+    else:
+        myobj.set_data(record_field[:,:,counter])
+    plt.show();
+
+    plt.savefig('/tmp/' +username + '/frame%03d.png' % counter,format='png')    
+
+plt.close()
+os.system('convert -delay 20 /tmp/'  + username +'/frame*.png /tmp/' +username + '/animation.gif')
+os.system('rm /tmp/' + username + '/frame*.png')
+         
+       
+       
+        
