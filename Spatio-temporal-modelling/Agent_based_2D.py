@@ -1,4 +1,6 @@
 import matplotlib
+
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt #as per the above, much easier to write over and over again
 from numpy import random
 from matplotlib import colors
@@ -9,14 +11,13 @@ import numpy as np
 import os
 import getpass
 
-NUMA=1000
-NUMB=1000
-RAN_A=False
-ATTR=10
+NUMA=1000   # NUmber of A
+NUMB=1000   # Number of B
+RAN_A=False # randomise search by agent A - B automatically searches randomly
+ATTR=10 # attack range
 
 username=getpass.getuser()
     
-EXPERIMENT = 1   
     
 
 if not os.path.exists('/tmp/' + username):
